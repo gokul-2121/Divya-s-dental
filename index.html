@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Divya's Multispeciality Dental Clinic | Kazhakkoottam, Trivandrum</title>
+  <meta name="description" content="Dr. Divya's Multispeciality Dental Clinic in Kazhakkoottam, Thiruvananthapuram. Advanced painless root canals, dental implants, braces, aligners, teeth whitening, and pediatric dental care.">
+  <meta name="keywords" content="Dr Divya Dental Clinic, Dentist Kazhakkoottam, Dental Clinic Trivandrum, Root Canal Treatment Kazhakkoottam, Dental Implants Thiruvananthapuram, Best Dentist near AJ Hospital">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Divya's Multispeciality Dental Clinic | Kazhakkoottam">
+  <meta property="og:description" content="Painless, high-tech dental treatments by certified specialists in Kazhakkoottam, Thiruvananthapuram.">
+  <meta property="og:image" content="assets/images/google_equipment.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <aside class="top-bar" aria-label="Quick contact information">
+    <div class="container top-bar-inner">
+      <div class="top-info">
+        <div class="top-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Above Shop & Save, Near AJ Hospital, Kazhakkoottam, Trivandrum</span>
+        </div>
+        <div class="top-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+918593824501">+91 85938 24501</a>
+          <span style="opacity: 0.5;">/</span>
+          <a href="tel:+917994244411">+91 79942 44411</a>
+        </div>
+        <div class="top-item">
+          <i class="fas fa-clock"></i>
+          <span>Open All Days: 9:30 AM - 7:30 PM (Wed by Appt)</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="admin-pill" class="admin-mode-pill" onclick="app.toggleAdminMode()" title="Doctor's self-service photo & media manager">
+          <i class="fas fa-camera"></i> Change Photos Mode
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#home" class="brand-logo" aria-label="Dr. Divya's Multispeciality Dental Clinic Homepage">
+        <div class="logo-icon">
+          <i class="fas fa-tooth"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Dr. Divya's</h1>
+          <p>Multispeciality Dental Clinic</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#real-clinic" class="nav-link">Our Real Clinic</a></li>
+          <li><a href="#services" class="nav-link">Procedures & Photos</a></li>
+          <li><a href="#action-showcase" class="nav-link">Doctors in Action</a></li>
+          <li><a href="#reviews" class="nav-link">Customer Reviews</a></li>
+          <li><a href="#location" class="nav-link">Location & Map</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA -->
+      <div class="nav-cta">
+        <a href="#booking" class="btn btn-primary">
+          <i class="fas fa-calendar-check"></i> Book Visit
+        </a>
+        <a href="https://wa.me/918593824501?text=Hello%20Dr.%20Divya%27s%20Dental%20Clinic,%20I%20would%20like%20to%20inquire%20about%20a%20dental%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Chat on WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-toggle-btn" class="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Photo Manager Self-Service Banner (Visible when Doctor Mode is ON) -->
+  <div class="container">
+    <div id="photo-manager-banner" class="photo-manager-banner hidden">
+      <div class="pm-left">
+        <i class="fas fa-sliders-h pm-icon"></i>
+        <div class="pm-info">
+          <h4>Photo Customizer Active (Client Self-Service)</h4>
+          <p>You can replace any photo directly on this page! Click the <strong>"Change Photo"</strong> button on any service card or hero image to upload your own picture or paste a link.</p>
+        </div>
+      </div>
+      <div class="pm-buttons">
+        <button class="btn btn-sm btn-outline" onclick="app.exportPhotoConfig()">
+          <i class="fas fa-copy"></i> Export Config
+        </button>
+        <button class="btn btn-sm btn-outline" onclick="app.resetAllPhotosToDefault()">
+          <i class="fas fa-undo"></i> Reset to Action Photos
+        </button>
+        <button class="btn btn-sm btn-primary" onclick="app.toggleAdminMode()">
+          <i class="fas fa-check"></i> Done Editing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION: White & Medical Blue Aesthetic with Real Google Photo
+         ========================================== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <!-- Hero Left Column: Text & Badges -->
+        <div class="hero-content">
+          <div class="trust-badge-row">
+            <div class="google-trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle;">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              <span>4.9 / 5.0 Rating</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span style="color: var(--text-light); font-weight: 500;">(274+ Google Reviews)</span>
+            </div>
+          </div>
+
+          <h2 class="hero-title">
+            Gentle, Precise Dental Care by <span class="highlight">Experienced Specialists</span>
+          </h2>
+
+          <p class="hero-subtitle">
+            Welcome to <strong>Dr. Divya's Multispeciality Dental Clinic</strong> in Kazhakkoottam, Thiruvananthapuram. We provide pain-free root canals, dental implants, smile makeovers, and braces with advanced microscopic and 3D digital technology.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#booking" class="btn btn-primary">
+              <i class="fas fa-calendar-alt"></i> Schedule Appointment
+            </a>
+            <a href="#location" class="btn btn-outline">
+              <i class="fas fa-location-arrow"></i> Find Our Clinic
+            </a>
+            <a href="tel:+918593824501" class="btn btn-outline" style="border-color: var(--border-light);">
+              <i class="fas fa-phone"></i> +91 85938 24501
+            </a>
+          </div>
+
+          <div class="hero-perks">
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <div class="perk-text">
+                <h4>Microscopic RCT</h4>
+                <p>Painless & high-precision</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div class="perk-text">
+                <h4>100% Sterilization</h4>
+                <p>Class-B hospital grade</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <div class="perk-text">
+                <h4>7 Specialists</h4>
+                <p>MDS specialist panel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Real Doctor Action Photo from Google -->
+        <div class="hero-media-wrapper">
+          <div class="hero-image-frame">
+            <img id="hero-action-img" src="assets/images/google_equipment.jpg" alt="Doctor Dr. Divya actively treating patient in dental chair at Kazhakkoottam clinic">
+            
+            <div class="action-photo-tag">
+              <span class="pulse-dot"></span>
+              <span id="hero-action-tag-text">Doctor in Action • Real Photo from Clinic</span>
+            </div>
+
+            <button class="change-photo-btn" onclick="app.openPhotoModal('hero', 'Main Hero Action Photo')" title="Replace main hero action photo">
+              <i class="fas fa-camera"></i> Change Hero Photo
+            </button>
+          </div>
+
+          <!-- Quick switcher pills for hero image -->
+          <div class="hero-photo-switch-bar">
+            <button class="hero-switch-btn active" onclick="app.swapHeroImage('assets/images/google_equipment.jpg', 'Doctor in Action • Real Clinic Photo', this)">
+              <i class="fas fa-user-md"></i> Doctor in Action
+            </button>
+            <button class="hero-switch-btn" onclick="app.swapHeroImage('assets/images/google_clinic_exterior.jpg', 'Clinic Exterior & Signboard', this)">
+              <i class="fas fa-hospital"></i> Clinic Exterior
+            </button>
+            <button class="hero-switch-btn" onclick="app.swapHeroImage('assets/images/google_reception.jpg', 'Reception & Specialists Board', this)">
+              <i class="fas fa-couch"></i> Reception
+            </button>
+            <button class="hero-switch-btn" onclick="app.swapHeroImage('assets/images/google_treatment_room.jpg', 'Modern Dental Chair & Unit', this)">
+              <i class="fas fa-chair"></i> Operatory
+            </button>
+          </div>
+
+          <div class="floating-action-badge">
+            <div class="badge-avatar-icon">
+              <i class="fas fa-teeth-open"></i>
+            </div>
+            <div>
+              <div class="badge-text-title">Painless Dentistry Protocol</div>
+              <div class="badge-text-sub">Comfortable experience for kids & adults</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         REAL CLINIC SHOWCASE (Photos from Google)
+         ========================================== -->
+    <section id="real-clinic" class="real-clinic-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fab fa-google"></i> Google Verified Clinic Photos</span>
+          <h2 class="section-title">Our Real Clinic in <span>Kazhakkoottam</span></h2>
+          <p class="section-desc">
+            Authentic photos of Dr. Divya's Multispeciality Dental Clinic directly from our Google Business profile, showing our real building, reception, operatory, and active clinical care.
+          </p>
+        </div>
+
+        <!-- 4-Card Real Photo Grid -->
+        <div class="real-clinic-grid">
+          <!-- Card 1: Exterior Signboard -->
+          <div class="real-clinic-card">
+            <div class="real-clinic-img-wrap">
+              <img src="assets/images/google_clinic_exterior.jpg" alt="Dr. Divya's Multispeciality Dental Clinic signboard on Krishnakripa Building above Shop & Save">
+              <span class="google-verified-photo-tag">
+                <i class="fab fa-google"></i> Google Photo
+              </span>
+            </div>
+            <div class="real-clinic-card-content">
+              <h4>Clinic Exterior & Signage</h4>
+              <p>Krishnakripa Building (1st Floor), right above Shop & Save General Stores, 100m from AJ Hospital Kazhakkoottam.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Doctor Treating Patient -->
+          <div class="real-clinic-card">
+            <div class="real-clinic-img-wrap">
+              <img src="assets/images/google_equipment.jpg" alt="Doctor in surgical mask and gloves actively treating patient in dental chair">
+              <span class="google-verified-photo-tag">
+                <i class="fab fa-google"></i> Doctor in Action
+              </span>
+            </div>
+            <div class="real-clinic-card-content">
+              <h4>Doctor in Clinical Action</h4>
+              <p>Specialist doctor attentively examining and performing precise dental treatment with sterile disposable gloves and mask.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Reception & Specialists Board -->
+          <div class="real-clinic-card">
+            <div class="real-clinic-img-wrap">
+              <img src="assets/images/google_reception.jpg" alt="Reception desk and official doctors board listing all MDS dental specialists">
+              <span class="google-verified-photo-tag">
+                <i class="fab fa-google"></i> Reception Lounge
+              </span>
+            </div>
+            <div class="real-clinic-card-content">
+              <h4>Reception & Specialists Board</h4>
+              <p>Welcoming consultation lobby displaying official MDS qualification board of Dr. Divya A.S. and consultant specialists.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Treatment Operatory -->
+          <div class="real-clinic-card">
+            <div class="real-clinic-img-wrap">
+              <img src="assets/images/google_treatment_room.jpg" alt="Hygienic operatory room with modern green ergonomic dental chair and instruments">
+              <span class="google-verified-photo-tag">
+                <i class="fab fa-google"></i> Operatory Room
+              </span>
+            </div>
+            <div class="real-clinic-card-content">
+              <h4>Treatment Operatory</h4>
+              <p>Modern ergonomic dental unit with ultrasonic scaler, curing light, and Class-B autoclave sterile instrument packs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Specialists Directory from Clinic Board -->
+        <div class="specialists-box">
+          <div class="specialists-header">
+            <div>
+              <h3>Our Panel of Dental Specialists</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Certified MDS Dental Specialists available for advanced treatments</p>
+            </div>
+            <a href="#booking" class="btn btn-sm btn-primary">
+              <i class="fas fa-calendar-alt"></i> Consult a Specialist
+            </a>
+          </div>
+
+          <div class="specialists-grid">
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-user-md"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Divya A.S.</h5>
+                <p>BDS, MDS • Chief Dental Surgeon</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-teeth"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Abhiraj</h5>
+                <p>MDS • Orthodontics (Braces & Aligners)</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-microscope"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Remya Mohan</h5>
+                <p>MDS • Endodontist (Root Canal Specialist)</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-syringe"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Anoop Kumar</h5>
+                <p>MDS • Oral & Maxillofacial Surgeon</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-tooth"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Niyas Bin Nazimudeen</h5>
+                <p>MDS • Periodontist & Implantologist</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-child"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Anisha Nanda</h5>
+                <p>MDS • Pedodontist (Child Specialist)</p>
+              </div>
+            </div>
+
+            <div class="specialist-card-chip">
+              <div class="specialist-icon"><i class="fas fa-crown"></i></div>
+              <div class="specialist-info">
+                <h5>Dr. Subin E.K.</h5>
+                <p>MDS • Prosthodontist (Crowns & Bridges)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES SECTION: Picture Representation of Services
+         ========================================== -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-teeth"></i> Picture Representation of Services</span>
+          <h2 class="section-title">Specialised Treatments & <span>Clinical Procedures</span></h2>
+          <p class="section-desc">
+            Explore our comprehensive dental treatments. Each procedure is represented with authentic clinical action photography showcasing our equipment and techniques.
+          </p>
+        </div>
+
+        <!-- Service Filter Pills -->
+        <div class="services-filter-bar">
+          <button class="service-filter-btn active" data-filter="all">All Procedures</button>
+          <button class="service-filter-btn" data-filter="endodontics">Root Canal (RCT)</button>
+          <button class="service-filter-btn" data-filter="surgery">Dental Implants</button>
+          <button class="service-filter-btn" data-filter="orthodontics">Braces & Aligners</button>
+          <button class="service-filter-btn" data-filter="cosmetic">Teeth Whitening</button>
+          <button class="service-filter-btn" data-filter="pediatric">Pediatric Care</button>
+          <button class="service-filter-btn" data-filter="digital">3D Digital Scans</button>
+        </div>
+
+        <!-- Dynamic Services Grid -->
+        <div id="services-grid" class="services-grid">
+          <!-- Populated by JavaScript with procedural photos -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         DOCTORS IN ACTION SHOWCASE (Procedural Excellence)
+         ========================================== -->
+    <section id="action-showcase" class="action-showcase-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-user-nurse"></i> Real Clinical Practice</span>
+          <h2 class="section-title">Doctors in Action: <span>Care in Motion</span></h2>
+          <p class="section-desc">
+            No stiff studio poses. Here is a glimpse of our dental specialists actively performing clinical procedures with surgical loupes, dental operating microscopes, and sterile precision instruments.
+          </p>
+        </div>
+
+        <div class="showcase-feature-box">
+          <div class="showcase-grid">
+            <!-- 4-tile procedural gallery -->
+            <div class="showcase-gallery">
+              <div class="showcase-tile">
+                <img src="assets/images/root-canal-action.jpg" alt="Doctor performing root canal treatment with microscope">
+                <div class="tile-caption">Microscope Endodontics</div>
+              </div>
+              <div class="showcase-tile">
+                <img src="assets/images/implant-surgery.jpg" alt="Oral surgeon placing dental implant">
+                <div class="tile-caption">Precision Implant Surgery</div>
+              </div>
+              <div class="showcase-tile">
+                <img src="assets/images/orthodontics-action.jpg" alt="Orthodontist adjusting braces on patient">
+                <div class="tile-caption">Orthodontic Alignment</div>
+              </div>
+              <div class="showcase-tile">
+                <img src="assets/images/teeth-whitening-action.jpg" alt="Cosmetic dentist performing laser teeth whitening">
+                <div class="tile-caption">Laser Smile Whitening</div>
+              </div>
+            </div>
+
+            <!-- Descriptive copy block -->
+            <div class="showcase-content-block">
+              <h3>Active Treatment, Sterile Environment</h3>
+              <p>
+                At Dr. Divya's Multispeciality Dental Clinic, our philosophy centers on patient-first gentleness paired with hospital-level precision. When you sit in our chair, every step is explained transparently.
+              </p>
+
+              <div class="protocol-checklist">
+                <div class="protocol-item">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <h5>Digital Micro-Visuals</h5>
+                    <p>High-magnification loupes for microscopic precision</p>
+                  </div>
+                </div>
+                <div class="protocol-item">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <h5>Autoclaved Instruments</h5>
+                    <p>Single-use pouch sterilization protocols</p>
+                  </div>
+                </div>
+                <div class="protocol-item">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <h5>Anxiety-Free Methods</h5>
+                    <p>Painless anesthesia delivery for zero discomfort</p>
+                  </div>
+                </div>
+                <div class="protocol-item">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <h5>Full Smile Previews</h5>
+                    <p>3D scanning before initiating aligners or crowns</p>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#booking" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> Book an In-Person Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CUSTOMER REVIEWS SECTION
+         ========================================== -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-star"></i> Verified Feedback</span>
+          <h2 class="section-title">What Our Patients <span>Say About Us</span></h2>
+          <p class="section-desc">
+            Real experiences from patients across Kazhakkoottam, Trivandrum, Technopark, and nearby areas who trust Dr. Divya's Dental Clinic.
+          </p>
+        </div>
+
+        <!-- Google Reviews Overview Card -->
+        <div class="reviews-summary-card">
+          <div class="rating-score-block">
+            <div class="score-number">4.9</div>
+            <div class="score-details">
+              <h4>
+                Excellent Google Rating
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+              </h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="google-verified-tag">
+                <i class="fas fa-check-circle"></i> Based on 274+ verified Google user reviews
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+            <button class="btn btn-outline" onclick="app.openReviewModal()">
+              <i class="fas fa-pen"></i> Write a Review
+            </button>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJC1vJ3-wB_zsRt8mQ637_J8E" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i class="fab fa-google"></i> Review on Google
+            </a>
+          </div>
+        </div>
+
+        <!-- Review Filter Pills -->
+        <div class="reviews-filter-pills">
+          <button class="review-filter-btn active" data-filter="all">All Reviews</button>
+          <button class="review-filter-btn" data-filter="rct">Root Canal</button>
+          <button class="review-filter-btn" data-filter="ortho">Aligners & Braces</button>
+          <button class="review-filter-btn" data-filter="implant">Dental Implants</button>
+          <button class="review-filter-btn" data-filter="pediatric">Pediatric Care</button>
+          <button class="review-filter-btn" data-filter="cosmetic">Teeth Whitening</button>
+        </div>
+
+        <!-- Dynamic Reviews Grid -->
+        <div id="reviews-grid" class="reviews-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LOCATION & DIRECTIONS SECTION (Location add aakanm)
+         ========================================== -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge"><i class="fas fa-map-marked-alt"></i> Clinic Location & Directions</span>
+          <h2 class="section-title">Visit Our Clinic in <span>Kazhakkoottam</span></h2>
+          <p class="section-desc">
+            Conveniently located on the first floor of Krishnakripa Building, right above Shop & Save General Store, near AJ Hospital in Kazhakkoottam, Trivandrum with dedicated parking space.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Left: Detailed Contact & Landmark Cards -->
+          <div class="location-info-card">
+            <!-- Address Item -->
+            <div class="loc-info-item">
+              <div class="loc-icon">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <div class="loc-details">
+                <h4>Clinic Address</h4>
+                <p>
+                  <strong>Dr. Divya's Multispeciality Dental Clinic</strong><br>
+                  Krishnakripa Building (First Floor)<br>
+                  Above Shop and Save General Stores,<br>
+                  Near AJ Hospital, Kazhakkoottam,<br>
+                  Thiruvananthapuram, Kerala – 695582
+                </p>
+                <span class="landmark-tag">
+                  <i class="fas fa-compass"></i> Landmark: Above Shop & Save, 100m from AJ Hospital
+                </span>
+              </div>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="loc-info-item">
+              <div class="loc-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="loc-details">
+                <h4>Phone & Appointment Inquiries</h4>
+                <p>
+                  <a href="tel:+918593824501"><strong>+91 85938 24501</strong></a> / 
+                  <a href="tel:+917994244411"><strong>+91 79942 44411</strong></a><br>
+                  WhatsApp: <a href="https://wa.me/918593824501" target="_blank" rel="noopener noreferrer">+91 85938 24501</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Timings Item -->
+            <div class="loc-info-item">
+              <div class="loc-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="loc-details" style="width: 100%;">
+                <h4>Working Hours</h4>
+                <table class="timing-table">
+                  <tbody>
+                    <tr>
+                      <td>All Days (Mon - Sun)</td>
+                      <td>9:30 AM – 7:30 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>By Appointment Only</td>
+                    </tr>
+                    <tr>
+                      <td>Emergency Dental Care</td>
+                      <td><span style="color: #10B981; font-weight: bold;">On-Call Available</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Accessibility & Parking -->
+            <div class="loc-info-item">
+              <div class="loc-icon">
+                <i class="fas fa-parking"></i>
+              </div>
+              <div class="loc-details">
+                <h4>Accessibility & Parking</h4>
+                <p>Easy vehicular access from Kazhakkoottam NH 66 Bypass, 5 minutes from Technopark campus. Dedicated car & two-wheeler parking available.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Google Maps Frame -->
+          <div class="location-map-card">
+            <div class="map-container">
+              <!-- Responsive Google Maps Embed centered on Kazhakkoottam, AJ Hospital -->
+              <iframe 
+                src="https://maps.google.com/maps?q=AJ+Hospital+Kazhakkoottam+Thiruvananthapuram&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                title="Dr. Divya's Multispeciality Dental Clinic Location Map"
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="map-card-footer">
+              <div class="map-footer-text">
+                <h5>Need Driving Directions?</h5>
+                <p>Open live navigation in Google Maps app on your phone</p>
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Dr.+Divya's+Multispeciality+Dental+Clinic+Kazhakkoottam+Thiruvananthapuram" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-primary">
+                <i class="fas fa-directions"></i> Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         APPOINTMENT BOOKING SECTION
+         ========================================== -->
+    <section id="booking" class="booking-section">
+      <div class="container">
+        <div class="booking-box">
+          <!-- Left side copy -->
+          <div class="booking-left">
+            <div>
+              <span class="section-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.25);">
+                <i class="fas fa-calendar-check"></i> Hassle-Free Booking
+              </span>
+              <h3>Book Your Dental Consultation</h3>
+              <p>
+                Fill out the quick appointment form to secure your preferred date and time. Our clinic desk will immediately verify and confirm via WhatsApp or phone call.
+              </p>
+
+              <ul class="booking-perk-list">
+                <li><i class="fas fa-check-circle"></i> Zero waiting time with prior scheduled slot</li>
+                <li><i class="fas fa-check-circle"></i> Flexible evening appointments for Technopark staff</li>
+                <li><i class="fas fa-check-circle"></i> Thorough examination & transparent cost estimate</li>
+              </ul>
+            </div>
+
+            <div class="direct-call-badge">
+              <p>Need urgent appointment or emergency?</p>
+              <a href="tel:+918593824501">
+                <i class="fas fa-phone-alt"></i> +91 85938 24501
+              </a>
+            </div>
+          </div>
+
+          <!-- Right side form -->
+          <div class="booking-form-wrap">
+            <h4>Request an Appointment</h4>
+            <p>Please provide your basic details and select your needed treatment.</p>
+
+            <form id="appointment-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="book-name" class="form-label">Full Name *</label>
+                  <input type="text" id="book-name" class="form-control" placeholder="e.g. Arun Kumar" required>
+                </div>
+                <div class="form-group">
+                  <label for="book-phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="book-phone" class="form-control" placeholder="e.g. 9876543210" required>
+                </div>
+                <div class="form-group full-width">
+                  <label for="book-service" class="form-label">Select Dental Treatment</label>
+                  <select id="book-service" class="form-control">
+                    <option value="Advanced Root Canal Treatment (RCT)">Advanced Root Canal Treatment (RCT)</option>
+                    <option value="Dental Implants & Replacement">Dental Implants & Replacement</option>
+                    <option value="Orthodontics & Clear Aligners">Orthodontics & Clear Aligners</option>
+                    <option value="Laser Teeth Whitening & Smile Design">Laser Teeth Whitening & Smile Design</option>
+                    <option value="Pediatric Dentistry (Kids Care)">Pediatric Dentistry (Kids Care)</option>
+                    <option value="3D Digital Intraoral Scanning & Crowns">3D Digital Intraoral Scanning & Crowns</option>
+                    <option value="Routine Teeth Cleaning & Polishing">Routine Teeth Cleaning & Polishing</option>
+                    <option value="General Consultation / Toothache Check">General Consultation / Toothache Check</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="book-date" class="form-label">Preferred Date</label>
+                  <input type="date" id="book-date" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="book-time" class="form-label">Preferred Time Slot</label>
+                  <select id="book-time" class="form-control">
+                    <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
+                    <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2:00 PM - 5:00 PM)</option>
+                    <option value="Evening (5:00 PM - 7:30 PM)">Evening (5:00 PM - 7:30 PM)</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="book-notes" class="form-label">Specific Dental Problem or Notes (Optional)</label>
+                  <textarea id="book-notes" class="form-control" rows="3" placeholder="Tell us if you are experiencing tooth pain, sensitivity, bleeding gums, or would like a smile consult..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fab fa-whatsapp"></i> Confirm & Book via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon" style="width: 40px; height: 40px; font-size: 1.25rem;">
+              <i class="fas fa-tooth"></i>
+            </div>
+            <div class="brand-text">
+              <h3 style="font-size: 1.15rem; color: #FFFFFF; margin: 0;">Dr. Divya's</h3>
+              <p style="color: #38BDF8; margin: 0;">Multispeciality Dental Clinic</p>
+            </div>
+          </div>
+          <p>
+            Leading dental healthcare center in Kazhakkoottam, Thiruvananthapuram. Committed to painless treatments, gentle care, and high-tech digital dentistry.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="tel:+918593824501" class="btn btn-sm btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.2);">
+              <i class="fas fa-phone"></i> Call Clinic
+            </a>
+            <a href="https://wa.me/918593824501" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-links-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#real-clinic">Our Real Clinic</a></li>
+            <li><a href="#services">Procedures & Photos</a></li>
+            <li><a href="#action-showcase">Doctors in Action</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+            <li><a href="#location">Location & Map</a></li>
+            <li><a href="#booking">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="footer-links-title">Treatments</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services">Microscopic Root Canal</a></li>
+            <li><a href="#services">Dental Implants</a></li>
+            <li><a href="#services">Clear Aligners & Braces</a></li>
+            <li><a href="#services">Laser Teeth Whitening</a></li>
+            <li><a href="#services">Pediatric Dentistry</a></li>
+            <li><a href="#services">3D Digital Scanning</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div>
+          <h4 class="footer-links-title">Clinic Hours & Contact</h4>
+          <ul class="footer-links-list">
+            <li>Mon - Sun: 9:30 AM – 7:30 PM</li>
+            <li>Wednesdays: By Appointment Only</li>
+            <li><i class="fas fa-map-marker-alt"></i> Above Shop & Save, Near AJ Hospital</li>
+            <li><i class="fas fa-phone"></i> +91 85938 24501</li>
+            <li><i class="fas fa-phone"></i> +91 79942 44411</li>
+            <li style="margin-top: 0.75rem;">
+              <button onclick="app.toggleAdminMode()" style="color: #38BDF8; font-size: 0.8rem; text-decoration: underline; cursor: pointer;">
+                <i class="fas fa-camera"></i> Doctor / Photo Manager
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Dr. Divya's Multispeciality Dental Clinic, Kazhakkoottam, Trivandrum. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: #64748B;">Featuring Google Verified Clinic Photos • Self-service photo manager enabled</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       PHOTO MANAGER MODAL (Client Can Change Photos Anytime)
+       ========================================== -->
+  <div id="photo-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-photo-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-photo-title" class="modal-title">Change Procedure Photo</h3>
+        <button class="modal-close-btn" onclick="app.closePhotoModal()" aria-label="Close dialog">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <label class="form-label">Live Preview</label>
+        <div class="photo-preview-box">
+          <img id="modal-preview-img" src="" alt="Preview">
+        </div>
+
+        <!-- Option 1: File Upload -->
+        <div style="margin-bottom: 1.25rem;">
+          <label class="form-label"><i class="fas fa-upload"></i> Option 1: Upload from Phone / Computer</label>
+          <input type="file" id="photo-file-input" class="form-control" accept="image/*">
+          <p style="font-size: 0.76rem; color: var(--text-light); margin-top: 0.25rem;">Select any photo from your device. It will automatically save to this browser.</p>
+        </div>
+
+        <!-- Option 2: Image Web URL -->
+        <div style="margin-bottom: 1.25rem;">
+          <label class="form-label"><i class="fas fa-link"></i> Option 2: Paste an Image URL</label>
+          <input type="url" id="photo-url-input" class="form-control" placeholder="https://example.com/clinic-procedure.jpg">
+        </div>
+
+        <!-- Option 3: Presets -->
+        <div>
+          <label class="form-label"><i class="fas fa-images"></i> Option 3: Choose from Curated Action Photos & Google Photos</label>
+          <div id="modal-presets" class="preset-photos-grid">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-sm btn-outline" onclick="app.resetCurrentPhoto()">
+          <i class="fas fa-undo"></i> Reset to Default
+        </button>
+        <button class="btn btn-sm btn-primary" onclick="app.savePhotoChange()">
+          <i class="fas fa-save"></i> Save & Apply Photo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       WRITE REVIEW MODAL
+       ========================================== -->
+  <div id="review-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-review-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-review-title" class="modal-title">Share Your Experience</h3>
+        <button class="modal-close-btn" onclick="app.closeReviewModal()" aria-label="Close dialog">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <form id="write-review-form">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="review-author" class="form-label">Your Name *</label>
+            <input type="text" id="review-author" class="form-control" placeholder="e.g. Priya Nair" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="review-locality" class="form-label">Your Locality / Area</label>
+            <input type="text" id="review-locality" class="form-control" placeholder="e.g. Kazhakkoottam, Trivandrum">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="review-service-name" class="form-label">Treatment Received</label>
+            <input type="text" id="review-service-name" class="form-control" placeholder="e.g. Root Canal Treatment / Dental Braces">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="review-rating" class="form-label">Rating</label>
+            <select id="review-rating" class="form-control">
+              <option value="5">⭐⭐⭐⭐⭐ (5 Stars - Excellent)</option>
+              <option value="4">⭐⭐⭐⭐ (4 Stars - Very Good)</option>
+              <option value="3">⭐⭐⭐ (3 Stars - Good)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="review-message" class="form-label">Your Review *</label>
+            <textarea id="review-message" class="form-control" rows="4" placeholder="How was your consultation, treatment comfort, and interaction with Dr. Divya?" required></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-outline" onclick="app.closeReviewModal()">Cancel</button>
+          <button type="submit" class="btn btn-sm btn-primary">
+            <i class="fas fa-paper-plane"></i> Submit Review
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <div class="brand-text">
+        <h4 style="font-size: 1.1rem; color: var(--primary-900);">Dr. Divya's Dental</h4>
+        <p style="font-size: 0.75rem; color: var(--primary-600);">Kazhakkoottam, Trivandrum</p>
+      </div>
+      <button id="drawer-close-btn" class="modal-close-btn" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#real-clinic">Our Real Clinic</a></li>
+      <li><a href="#services">Procedures & Photos</a></li>
+      <li><a href="#action-showcase">Doctors in Action</a></li>
+      <li><a href="#reviews">Customer Reviews</a></li>
+      <li><a href="#location">Location & Map</a></li>
+      <li><a href="#booking">Book Appointment</a></li>
+    </ul>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="tel:+918593824501" class="btn btn-primary" style="width: 100%;">
+        <i class="fas fa-phone-alt"></i> Call Clinic (+91 85938 24501)
+      </a>
+      <a href="https://wa.me/918593824501" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <button class="btn btn-outline" onclick="app.toggleAdminMode()" style="width: 100%; font-size: 0.85rem;">
+        <i class="fas fa-camera"></i> Change Photos Mode
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Sticky Action Buttons -->
+  <div class="floating-widgets">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918593824501?text=Hello%20Dr.%20Divya%27s%20Dental%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-btn whatsapp" 
+       aria-label="Direct WhatsApp Chat">
+      <i class="fab fa-whatsapp"></i>
+      <span class="floating-tooltip">Chat with Doctor</span>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:+918593824501" 
+       class="floating-btn call" 
+       aria-label="Call Clinic Directly">
+      <i class="fas fa-phone-alt"></i>
+      <span class="floating-tooltip">Call +91 85938 24501</span>
+    </a>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="site-toast" class="toast-msg"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
